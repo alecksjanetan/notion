@@ -1,0 +1,2025 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>AJ's DigiWorld</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="/css/stylesheet.css" type="text/css">
+  <link rel="icon" type="image/png" href="/Img/favicon-48x48.png" sizes="48x48" />
+  <link rel="icon" type="image/svg+xml" href="/Img/favicon.svg" />
+  <link rel="shortcut icon" href="/Img/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/Img/apple-touch-icon.png" />
+  <meta name="apple-mobile-web-app-title" content="AJ's DigiWorld" />
+  <link rel="manifest" href="/Img/site.webmanifest" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/Img/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/Img/favicon-16x16.png" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+  <script src="https://kit.fontawesome.com/fb84ae47bd.js" crossorigin="anonymous"></script>
+
+</head>
+<style>
+  @font-face {
+    font-family: 'Lexique';
+    src: url('Lexique-Regular.woff2') format('woff2'),
+      url('Lexique-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: 'Lexique';
+    src: url('Lexique-Regular.woff2') format('woff2'),
+      url('Lexique-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  a {
+
+    text-decoration: none;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+
+  body {
+    font-family: 'Lexique';
+    margin: 0;
+  }
+
+  .navbar {
+    overflow: hidden;
+    background-color: #fcedf0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Lexique';
+  }
+
+
+  .navbar a {
+    float: left;
+    display: block;
+    color: #f0737f;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+    font-size: 20px;
+    /*text-transform: uppercase;*/
+  }
+
+
+  .navbar a.right {
+    float: right;
+  }
+
+
+  .navbar a:hover {
+    background-color: #fcedf0;
+    color: #ffb5c2;
+    text-decoration: underline;
+  }
+
+  .nav-menu ul {
+    list-style: none;
+    display: flex;
+  }
+
+  .nav-menu ul li a {
+    text-decoration: none;
+    padding: 10px 20px;
+    color: #f0737f;
+  }
+
+  /* Hide Menu and Show Hamburger Icon on Mobile */
+  .menu-icon {
+    display: none;
+    /* Hidden on desktop */
+    flex-direction: column;
+    cursor: pointer;
+  }
+
+  .menu-icon .bar {
+    width: 25px;
+    height: 3px;
+    background-color: #f0737f;
+    margin: 4px 0;
+  }
+
+  .nav-menu.active {
+    display: flex;
+    /* Displayed when .active is toggled */
+    flex-direction: column;
+    width: 100%;
+    background-color: #f8f8f8;
+    position: absolute;
+    top: 60px;
+    left: 0;
+  }
+
+  .header {
+    padding: 80px;
+    text-align: left;
+    color: white;
+    background-image: url(https://i.ibb.co/8sn0kpF/Header-BG-1.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 540px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    font-family: 'Lexique';
+  }
+
+
+  .header h1 {
+    font-size: 60px;
+    margin: 0px;
+    font-family: 'Lexique';
+    padding-left: 80px;
+  }
+
+  .header p {
+    font-size: 45px;
+    margin-top: 5px;
+    max-width: 50%;
+    line-height: 1.3;
+    font-family: 'Lexique';
+    padding-left: 80px;
+  }
+
+  .btn a {
+    background-color: #f0737f;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 16px;
+    text-align: center;
+    text-decoration: none !important;
+    font-size: 30px;
+    font-family: 'Lexique';
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    width: 200px;
+  }
+
+  .btn a:hover {
+    background-color: #fcedf0;
+    color: #f0737f;
+    padding: 10px 20px;
+    border: #f0737f solid 2px;
+    border-radius: 16px;
+  }
+
+  .btn {
+    margin-left: none;
+    margin-right: none;
+    padding-left: 80px;
+  }
+
+  .about {
+    padding-left: 80px;
+    padding-top: 80px;
+    padding-bottom: 40px;
+    text-align: left;
+    color: #f0737f;
+    background-color: #fcedf0;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    max-height: 540px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .about h1 {
+    font-size: 60px;
+    margin: 0px;
+    font-family: 'Lexique';
+    padding-left: 80px;
+  }
+
+  .about p {
+    font-size: 30px;
+    margin-top: 20px;
+    max-width: 90%;
+    line-height: 1.3;
+    font-family: 'Lexique';
+    padding-left: 80px;
+  }
+
+  .experiences {
+    padding-left: 80px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    text-align: left;
+    color: #f0737f;
+    background-color: #fcedf0;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    max-height: 540px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
+  }
+
+  .experiences .grid {
+    display: grid;
+    max-height: 200px;
+    align-content: left;
+    grid-template-columns: auto auto auto;
+    gap: 10px;
+    margin-top: 20px;
+
+  }
+
+  .experiences>div {
+    background-color: none;
+    text-align: left;
+    padding: 0px;
+  }
+
+  .experiences h1 {
+    font-size: 60px;
+    margin: 0px;
+    font-family: 'Lexique';
+    padding-left: 80px;
+
+  }
+
+  .experiences h2 {
+    font-size: 40px;
+    padding-left: 80px;
+    margin-bottom: 0px;
+  }
+
+  .experiences p {
+    font-size: 30px;
+    margin-top: 5px;
+    max-width: 70%;
+    line-height: 1.3;
+    font-family: 'Lexique';
+    padding-left: 120px;
+  }
+
+  .skills {
+    padding-left: 80px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    text-align: left;
+    color: #f0737f;
+    background-color: #fcedf0;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    max-height: 800px;
+
+
+  }
+
+  .outer-Container {
+    padding-left: 80px;
+    margin-top: 40px;
+    display: grid;
+    align-content: left;
+    max-width: 90%;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto auto;
+    gap: 30px;
+    row-gap: 30px;
+
+  }
+
+  .outer-Container .h2 {
+    font-size: 40px;
+    padding-left: 0px;
+    margin-bottom: 0px;
+  }
+
+  .iner-wrapper {
+    padding: 0px 30px 30px 30px;
+    background-color: #fcedf0;
+    width: 100%;
+    height: auto;
+    -webkit-box-shadow: 1px 3px 8px 0px #f0737f;
+    box-shadow: 1px 3px 8px 0px #f0737f;
+
+
+  }
+
+  .skill-bar .info span {
+    display: inline-block;
+    margin: 30px 0px 0px 0px;
+    font-size: 30px;
+    font-weight: 500;
+    color: #f0737f;
+  }
+
+  .progress-bar {
+    position: relative;
+    overflow: hidden;
+    margin: 10px 0px;
+    width: 100%;
+    height: 8px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    -webkit-transform: scaleX(0);
+    -ms-transform: scaleX(0);
+    transform: scaleX(0);
+    -webkit-transform-origin: left;
+    -ms-transform-origin: left;
+    transform-origin: left;
+    -webkit-animation: animate 1s cubic-bezier(1, 0, 0.5, 1) forwards;
+    animation: animate 1s cubic-bezier(1, 0, 0.5, 1) forwards;
+  }
+
+  .progress-bar span {
+    position: absolute;
+    background: #000;
+    width: 100%;
+    height: 8px;
+    border-radius: 10px;
+    -webkit-transform: scaleX(0);
+    -ms-transform: scaleX(0);
+    transform: scaleX(0);
+    -webkit-transform-origin: left;
+    -ms-transform-origin: left;
+    transform-origin: left;
+    -webkit-animation: animate 1s 1s cubic-bezier(1, 0, 0.5, 1) forwards;
+    animation: animate 1s 1s cubic-bezier(1, 0, 0.5, 1) forwards;
+  }
+
+  @-webkit-keyframes animate {
+    100% {
+      -webkit-transform: scaleX(1);
+      transform: scaleX(1);
+    }
+  }
+
+  @keyframes animate {
+    100% {
+      -webkit-transform: scaleX(1);
+      transform: scaleX(1);
+    }
+  }
+
+  .html span {
+    width: 100%;
+    background: #ffb5c2;
+  }
+
+  .css span {
+    width: 95%;
+    background: #fec0cb;
+  }
+
+  .javascript span {
+    width: 70%;
+    background: #ffd7de;
+  }
+
+  .sql span {
+    width: 80%;
+    background: #fecbd4;
+  }
+
+  .photoshop span {
+    width: 100%;
+    background: #ffb5c2;
+  }
+
+  .canva span {
+    width: 100%;
+    background: #fec0cb;
+  }
+
+  .premiere span {
+    width: 95%;
+    background: #fecbd4;
+  }
+
+  .illustrator span {
+    width: 90%;
+    background: #ffd7de;
+  }
+
+  .seo span {
+    width: 90%;
+    background: #fecbd4;
+  }
+
+  .email span {
+    width: 95%;
+    background: #fec0cb;
+  }
+
+  .social span {
+    width: 100%;
+    background: #ffb5c2;
+  }
+
+  .affiliate span {
+    width: 85%;
+    background: #ffd7de;
+  }
+
+  .skills h1 {
+    font-size: 60px;
+    margin: 0px;
+    font-family: 'Lexique';
+    padding-left: 80px;
+  }
+
+  .skills h2 {
+    font-size: 40px;
+    padding-left: 80px;
+    margin-bottom: 0px;
+  }
+
+  .skills p {
+    font-size: 30px;
+    margin-top: 20px;
+    max-width: 70%;
+    line-height: 1.3;
+    font-family: 'Lexique';
+    padding-left: 80px;
+  }
+
+  .services {
+    padding-left: 80px;
+    padding-top: 80px;
+    padding-bottom: 40px;
+    text-align: left;
+    color: #f0737f;
+    background-color: #fcedf0;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    max-height: 800px;
+  }
+
+  .collapsible-container {
+    max-width: 600px;
+  margin: 0 auto;
+}
+
+.collapsible {
+    display: none;
+}
+
+/* Collapsible content hidden by default */
+.collapsible-content {
+  display: none;
+  padding: 10px;
+  background-color: #fdd7de;
+  border: 0px solid #ddd;
+  font-size: 15px;
+
+}
+
+/* Toggle button styles */
+.collapsible-toggle {
+  width: 100%;
+  padding: 15px;
+  text-align: left;
+  font-size: 18px;
+  font-family: 'Lexique';
+  background-color: #fde2e7;
+  color: #f0737f;
+  border: none;
+  cursor: pointer;
+}
+
+  .services .grid {
+    padding-left: 0px;
+    margin-top: 40px;
+    display: grid;
+    align-content: left;
+    max-width: 90%;
+    grid-template-columns: 30% 30% 30%;
+    grid-template-rows: auto auto auto;
+    gap: 20px;
+    row-gap: 20px;
+  }
+
+  .services>div {
+    background-color: none;
+    text-align: left;
+    padding: 0px;
+    width: 100%;
+  }
+
+  .services h1 {
+    font-size: 60px;
+    margin: 0px;
+    font-family: 'Lexique';
+    padding-left: 80px;
+  }
+
+  .services h2 {
+    font-size: 40px;
+    padding-left: 80px;
+    margin-bottom: 0px;
+  }
+
+  .services p {
+    font-size: 30px;
+    margin-top: 5px;
+    max-width: 90%;
+    line-height: 1.3;
+    font-family: 'Lexique';
+    padding-left: 80px;
+  }
+
+  .contact {
+    padding-left: 80px;
+    padding-top: 0px;
+    padding-bottom: 40px;
+    text-align: left;
+    color: #f0737f;
+    background-color: #fcedf0;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    max-height: 700px;
+  }
+
+  .contact .icons {
+    display: grid;
+    grid-template-columns: auto auto;
+    font-size: 40px;
+    padding-left: 80px;
+    justify-content: center;
+    justify-items: center;
+    width: 90%;
+  }
+
+  .contact a {
+    padding-left: 80px;
+    font-size: 40px;
+  }
+
+  .contact h1 {
+    font-size: 60px;
+    margin: 0px;
+    font-family: 'Lexique';
+    padding-left: 80px;
+    padding-bottom: 30px;
+  }
+
+  .contact p {
+    font-size: 30px;
+    margin-top: 5px;
+    max-width: 50%;
+    line-height: 1.3;
+    font-family: 'Lexique';
+    padding-left: 80px;
+  }
+
+  .contact form {
+    width: 100%;
+    max-width: 500px;
+    padding-left: 80px;
+    font-size: 30px;
+    padding-top: 30px;
+  }
+
+  .contact label {
+    display: block;
+    margin-top: 10px;
+  }
+
+  .contact input[type="text"],
+  input[type="email"],
+  textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #f0737f;
+    border-radius: 4px;
+    font-family: 'Lexique';
+    font-size: 30px;
+    color: #ffb5c2;
+  }
+
+  .contact button {
+    width: 100%;
+    padding: 10px;
+    margin-top: 15px;
+    background-color: #f0737f;
+    color: white;
+    border: none;
+    border-radius: 16px;
+    cursor: pointer;
+    font-family: 'Lexique';
+    font-size: 30px;
+  }
+
+  .contact button:hover {
+    background-color: #fcedf0;
+    color: #f0737f;
+    padding: 10px 20px;
+    border: #f0737f solid 2px;
+    border-radius: 16px;
+  }
+
+  .row {
+    display: -ms-flexbox;
+    /* IE10 */
+    display: flex;
+  }
+
+
+  .side {
+    -ms-flex: 30%;
+    /* IE10 */
+    flex: 30%;
+    background-color: #f1f1f1;
+    padding: 20px;
+  }
+
+
+  .main {
+
+    -ms-flex: 70%;
+    /* IE10 */
+    flex: 70%;
+    background-color: white;
+    padding: 20px;
+  }
+
+
+
+
+  .footer {
+    padding: 20px;
+    text-align: center;
+    background: #fcedf0;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    font-family: 'Lexique';
+    font-size: 20px;
+    color: #f0737f;
+    text-decoration: none;
+  }
+
+  .footer a {
+    text-decoration: none;
+    margin: 5px 20px;
+    color: #f0737f;
+  }
+
+  .footer a:hover {
+    color: #ffb5c2;
+  }
+
+
+
+
+  @media screen and (max-width: 1500px) {
+    p {
+      font-size: 18px !important;
+    }
+
+    h1 {
+      font-size: 30px !important;
+    }
+
+    h2 {
+      font-size: 22px !important;
+    }
+
+    .row {
+      flex-direction: column;
+      align-content: center;
+      align-items: center;
+    }
+
+    .navbar {
+      float: none;
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      align-content: center;
+      align-items: center;
+      font-size: 18px;
+    }
+
+    .navbar a {
+      font-size: 18px;
+    }
+
+    .navbar img {
+      width: 35px;
+      height: 35px;
+    }
+
+    .header {
+      padding-top: 20px;
+      padding-left: 40px;
+      padding-right: 40px;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+
+    .header h1 {
+      font-size: 25px;
+      margin-top: 10px;
+      max-width: 100%;
+      line-height: 1.3;
+      font-family: 'Lexique';
+      display: flex;
+      justify-content: left;
+      flex-direction: column;
+      align-content: left;
+      flex-wrap: nowrap;
+      align-items: left;
+      text-align: left;
+      background-color: rgb(240, 115, 127, 0);
+
+      font-weight: 700;
+    }
+
+    .header p {
+      font-size: 25px;
+      margin-top: 10px;
+      max-width: 100%;
+      line-height: 1.3;
+      font-family: 'Lexique';
+      display: flex;
+      justify-content: left;
+      flex-direction: column;
+      align-content: left;
+      flex-wrap: nowrap;
+      align-items: left;
+      text-align: left;
+      background-color: rgb(240, 115, 127, 0);
+    }
+
+    .btn a {
+      background-color: #f0737f;
+      color: white;
+      padding: 8px 15px;
+      border: none;
+      border-radius: 16px;
+      text-align: center;
+      text-decoration: none !important;
+      font-size: 18px;
+      font-family: 'Lexique';
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
+      width: 130px;
+      margin-left: auto !important;
+      margin-right: auto !important;
+      margin-top: none !important;
+    }
+
+    .about {
+      padding-left: 40px;
+      padding-right: 40px;
+      padding-top: 40px;
+      padding-bottom: 0px;
+      text-align: left;
+      color: #f0737f;
+      background-color: #fcedf0;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+    }
+
+    .about h1 {
+      font-size: 60px;
+      margin: 0px;
+      font-family: 'Lexique';
+      padding-left: 80px;
+    }
+
+    .about p {
+      font-size: 30px;
+      margin-top: 20px;
+      max-width: 90%;
+      line-height: 1.3;
+      font-family: 'Lexique';
+      padding-left: 80px;
+    }
+
+    .experiences {
+      padding-left: 40px;
+      padding-right: 40px;
+      padding-top: 10px;
+      padding-bottom: 0px;
+      text-align: left;
+      color: #f0737f;
+      background-color: #fcedf0;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+    }
+
+    .experiences .grid {
+      display: grid;
+      align-content: left;
+      grid-template-columns: 33% 33% 33%;
+      gap: 10px;
+      margin-top: -10px;
+      max-width: 90%;
+    }
+
+    .experiences>div {
+      background-color: none;
+      text-align: left;
+      padding-left: 80px;
+
+    }
+
+    .experiences h1 {
+      font-size: 60px;
+      margin: 0px;
+      font-family: 'Lexique';
+      margin-bottom: 10px;
+      padding-left: 0px;
+
+    }
+
+    .experiences h2 {
+      font-size: 40px;
+      padding: 0px;
+      margin-bottom: 0px;
+      max-width: 100%;
+    }
+
+    .experiences p {
+      font-size: 30px;
+      margin-top: 5px;
+      max-width: 100%;
+      line-height: 1.3;
+      font-family: 'Lexique';
+      padding: 00px;
+    }
+
+    .skills {
+      padding-left: 40px;
+      padding-right: 40px;
+      padding-top: 20px;
+      padding-bottom: px;
+      text-align: left;
+      color: #f0737f;
+      background-color: #fcedf0;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      max-height: 800px;
+    }
+
+    .outer-Container {
+      padding-left: 80px;
+      margin-top: 20px;
+      display: grid;
+      align-content: left;
+      max-width: 90%;
+      grid-template-columns: 30% 30% 30%;
+      grid-template-rows: auto auto;
+
+      row-gap: 10px;
+    }
+
+    .outer-Container .h2 {
+      font-size: 22px;
+      padding-left: 0px;
+      margin-bottom: 0px;
+      font-weight: 700;
+    }
+
+    .iner-wrapper {
+      padding: 0px 30px 30px 30px;
+      background-color: #fcedf0;
+      width: 100%;
+      height: auto;
+      -webkit-box-shadow: 1px 3px 8px 0px #f0737f;
+      box-shadow: 1px 3px 8px 0px #f0737f;
+    }
+
+    .skill-bar .info span {
+      display: inline-block;
+      margin: 30px 0px 0px 0px;
+      font-size: 18px;
+      font-weight: 500;
+      color: #f0737f;
+    }
+
+    .progress-bar {
+      position: relative;
+      overflow: hidden;
+      margin: 3px 0px;
+      width: 100%;
+      height: 8px;
+      background-color: #ffffff;
+      border-radius: 10px;
+      -webkit-transform: scaleX(0);
+      -ms-transform: scaleX(0);
+      transform: scaleX(0);
+      -webkit-transform-origin: left;
+      -ms-transform-origin: left;
+      transform-origin: left;
+      -webkit-animation: animate 1s cubic-bezier(1, 0, 0.5, 1) forwards;
+      animation: animate 1s cubic-bezier(1, 0, 0.5, 1) forwards;
+    }
+
+    .progress-bar span {
+      position: absolute;
+      background: #000;
+      width: 100%;
+      height: 8px;
+      border-radius: 10px;
+      -webkit-transform: scaleX(0);
+      -ms-transform: scaleX(0);
+      transform: scaleX(0);
+      -webkit-transform-origin: left;
+      -ms-transform-origin: left;
+      transform-origin: left;
+      -webkit-animation: animate 1s 1s cubic-bezier(1, 0, 0.5, 1) forwards;
+      animation: animate 1s 1s cubic-bezier(1, 0, 0.5, 1) forwards;
+    }
+
+    @-webkit-keyframes animate {
+      100% {
+        -webkit-transform: scaleX(1);
+        transform: scaleX(1);
+      }
+    }
+
+    @keyframes animate {
+      100% {
+        -webkit-transform: scaleX(1);
+        transform: scaleX(1);
+      }
+    }
+
+    .html span {
+      width: 100%;
+      background: #ffb5c2;
+    }
+
+    .css span {
+      width: 95%;
+      background: #fec0cb;
+    }
+
+    .javascript span {
+      width: 70%;
+      background: #ffd7de;
+    }
+
+    .sql span {
+      width: 80%;
+      background: #fecbd4;
+    }
+
+    .photoshop span {
+      width: 100%;
+      background: #ffb5c2;
+    }
+
+    .canva span {
+      width: 100%;
+      background: #fec0cb;
+    }
+
+    .premiere span {
+      width: 95%;
+      background: #fecbd4;
+    }
+
+    .illustrator span {
+      width: 90%;
+      background: #ffd7de;
+    }
+
+    .seo span {
+      width: 90%;
+      background: #fecbd4;
+    }
+
+    .email span {
+      width: 95%;
+      background: #fec0cb;
+    }
+
+    .social span {
+      width: 100%;
+      background: #ffb5c2;
+    }
+
+    .affiliate span {
+      width: 85%;
+      background: #ffd7de;
+    }
+
+    .skills h1 {
+      font-size: 60px;
+      margin: 0px;
+      font-family: 'Lexique';
+      padding-left: 80px;
+    }
+
+    .skills h2 {
+      font-size: 40px;
+      padding-left: 80px;
+      margin-bottom: 0px;
+    }
+
+    .skills p {
+      font-size: 30px;
+      margin-top: 20px;
+      max-width: 70%;
+      line-height: 1.3;
+      font-family: 'Lexique';
+      padding-left: 80px;
+    }
+
+    .services {
+      padding-left: 40px;
+      padding-right: 40px;
+      padding-top: 10px;
+      padding-bottom: 0px;
+      text-align: left;
+      color: #f0737f;
+      background-color: #fcedf0;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      max-height: 0%;
+    }
+
+    .services .grid {
+      margin-top: 0px;
+      display: grid;
+      align-content: left;
+      max-width: 90%;
+      max-height: 50%;
+      grid-template-columns: 30% 30% 30%;
+      grid-template-rows: auto auto;
+      row-gap: 0px;
+      padding-left: 80px;
+    }
+
+    .grid div {
+      background-color: none;
+      text-align: left;
+      padding: 10px;
+
+    }
+
+    .services h1 {
+      font-size: 60px;
+      margin: 0px;
+      font-family: 'Lexique';
+    }
+
+    .services h2 {
+      font-size: 40px;
+      margin-bottom: 0px;
+      max-width: 100%;
+      padding-left: 0px;
+    }
+
+    .services p {
+      font-size: 30px;
+      max-width: 100%;
+      line-height: 1.3;
+      font-family: 'Lexique';
+      padding-left: 0px;
+    }
+
+    .contact {
+      padding-left: 40px;
+      padding-right: 40px;
+      padding-top: 0px;
+      padding-bottom: 30px;
+      text-align: left;
+      color: #f0737f;
+      background-color: #fcedf0;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      max-height: 100%;
+    }
+
+    .contact .icons {
+      display: grid;
+      grid-template-columns: auto auto;
+      font-size: 25px;
+      padding-left: 80px;
+      justify-content: center;
+      justify-items: center;
+      width: 90%;
+    }
+
+    .contact a {
+      padding-left: 80px;
+      font-size: 22px;
+    }
+
+    .contact h1 {
+      font-size: 60px;
+      margin: 0px;
+      font-family: 'Lexique';
+      padding-left: 80px;
+      padding-bottom: 20px;
+    }
+
+    .contact p {
+      font-size: 22px;
+      margin-top: 5px;
+      max-width: 50%;
+      line-height: 1.3;
+      font-family: 'Lexique';
+      padding-left: 80px;
+    }
+
+    .contact form {
+      width: 100%;
+      max-width: 500px;
+      padding-left: 80px;
+      font-size: 22px;
+      padding-top: 20px;
+    }
+
+    .contact label {
+      display: block;
+      margin-top: 10px;
+    }
+
+    .contact input[type="text"],
+    input[type="email"],
+    textarea {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border: 1px solid #f0737f;
+      border-radius: 4px;
+      font-family: 'Lexique';
+      font-size: 22px;
+      color: #ffb5c2;
+    }
+
+    .contact button {
+      width: 100%;
+      padding: 10px;
+      margin-top: 15px;
+      background-color: #f0737f;
+      color: white;
+      border: none;
+      border-radius: 16px;
+      cursor: pointer;
+      font-family: 'Lexique';
+      font-size: 22px;
+    }
+
+    .contact button:hover {
+      background-color: #fcedf0;
+      color: #f0737f;
+      padding: 10px 20px;
+      border: #f0737f solid 2px;
+      border-radius: 16px;
+    }
+
+
+    .footer {
+      font-size: 20px;
+    }
+  }
+
+
+  @media screen and (max-width: 768px) {
+    
+
+    .navbar {
+      float: none;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-content: center;
+      align-items: center;
+      padding-bottom: 30px;
+    }
+
+    .menu-icon {
+      display: flex;
+      /* Show the hamburger icon */
+      color: #f0737f;
+    }
+
+    .nav-menu {
+      display: none;
+      /* Hide the menu initially */
+      flex-direction: column;
+      width: 100%;
+      background-color: #fcedf0;
+      position: absolute;
+      top: 60px;
+      left: 0;
+      font-family: 'Lexique';
+      color: #f0737f;
+    }
+
+    .nav-menu.active {
+      display: flex;
+      /* Show menu when active */
+      flex-direction: column;
+      width: 100%;
+      background-color: #f8f8f8;
+      position: absolute;
+      top: 60px;
+      left: 0;
+    }
+
+    .nav-menu ul {
+      flex-direction: column;
+      margin: 0px !important;
+      padding-inline-start: 0px !important;
+    }
+
+    .nav-menu ul li a {
+      padding: 15px;
+      text-align: center;
+      display: block;
+      width: 100%;
+    }
+
+    .header {
+      padding: 0px;
+    }
+
+    .header h1 {
+      font-size: 25px;
+      padding-left: 40px;
+    }
+
+    .header p {
+      font-size: 22px !important;
+      margin-top: 10px;
+      max-width: 100%;
+      line-height: 1.3;
+      font-family: 'Lexique';
+      display: flex;
+      justify-content: left;
+      flex-direction: column;
+      align-content: left;
+      flex-wrap: nowrap;
+      align-items: left;
+      text-align: left;
+      background-color: rgb(240, 115, 127, 0);
+      padding-left: 40px;
+    }
+
+    .btn {
+      margin-left: none;
+      margin-right: none;
+      padding-left: 40px;
+    }
+
+    .btn a {
+      background-color: #f0737f;
+      color: white;
+      padding: 8px 15px;
+      border: none;
+      border-radius: 16px;
+      text-align: center;
+      text-decoration: none !important;
+      font-size: 18px;
+      font-family: 'Lexique';
+      display: flex;
+      align-items: flex-start;
+      justify-content: left;
+      width: 130px;
+    }
+
+    .about {
+      padding-left: 40px;
+      padding-right: 40px;
+      padding-top: 40px;
+      padding-bottom: 10px;
+      text-align: left;
+      color: #f0737f;
+      background-color: #fcedf0;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+    }
+
+    .about h1 {
+      font-size: 25px !important;
+      margin: 0px;
+      font-family: 'Lexique';
+      padding-left: 0px;
+
+    }
+
+    .about p {
+      font-size: 18px !important;
+      margin-top: 10px;
+      max-width: 95%;
+      line-height: 1.3;
+      font-family: 'Lexique';
+      padding-left: 0px;
+      padding-right: 0px;
+    }
+
+    .experiences {
+      padding-left: 0px;
+      padding-right: 0px;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      text-align: left;
+      color: #f0737f;
+      background-color: #fcedf0;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+    }
+
+    .experiences .grid {
+      display: grid;
+      align-content: left;
+      grid-template-rows: 30% 30% 30%;
+      /* column-gap: 1px; */
+      grid-template-columns: 100%;
+      margin-top: -20px;
+      max-width: 90%;
+      padding-left: 30px;
+    }
+
+    .experiences>div {
+      background-color: none;
+      text-align: left;
+      padding-left: 40px;
+
+    }
+
+    .experiences h1 {
+      font-size: 25px !important;
+      margin: 0px;
+      font-family: 'Lexique';
+      margin-bottom: 10px;
+      padding-left: 0px;
+
+    }
+
+    .experiences h2 {
+      font-size: 22px !important;
+      padding: 0px;
+      margin-bottom: 0px;
+      max-width: 100%;
+    }
+
+    .experiences p {
+      font-size: 18px !important;
+      margin-top: 5px;
+      max-width: 100%;
+      line-height: 1.3;
+      font-family: 'Lexique';
+      padding: 0px;
+    }
+
+    .skills {
+      padding-left: 0px;
+      padding-right: 0px;
+      padding-top: 40px;
+      padding-bottom: px;
+      text-align: left;
+      color: #f0737f;
+      background-color: #fcedf0;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      max-height: 800px;
+    }
+
+    .outer-Container {
+      padding-left: 40px;
+      margin-top: 15px;
+      display: grid;
+      align-content: left;
+      max-width: 90%;
+      grid-template-columns: 30% 30% 30%;
+      grid-template-rows: auto auto;
+      column-gap: 15px;
+      row-gap: 10px;
+    }
+
+    .outer-Container .h2 {
+      font-size: 22px !important;
+      padding-left: 0px;
+      margin-bottom: 0px;
+      font-weight: 700;
+    }
+
+    .iner-wrapper {
+      padding: 0px 10px 10px 10px;
+      background-color: #fcedf0;
+      width: 100%;
+      height: 100%;
+      -webkit-box-shadow: 1px 3px 8px 0px #f0737f;
+      box-shadow: 1px 3px 8px 0px #f0737f;
+    }
+
+    .skill-bar .info span {
+      display: inline-block;
+      margin: 10px 0px 0px 0px;
+      font-size: 18px !important;
+      font-weight: 500;
+      color: #f0737f;
+    }
+
+    .progress-bar {
+      position: relative;
+      overflow: hidden;
+      margin: 3px 0px;
+      width: 100%;
+      height: 8px;
+      background-color: #ffffff;
+      border-radius: 10px;
+      -webkit-transform: scaleX(0);
+      -ms-transform: scaleX(0);
+      transform: scaleX(0);
+      -webkit-transform-origin: left;
+      -ms-transform-origin: left;
+      transform-origin: left;
+      -webkit-animation: animate 1s cubic-bezier(1, 0, 0.5, 1) forwards;
+      animation: animate 1s cubic-bezier(1, 0, 0.5, 1) forwards;
+    }
+
+    .progress-bar span {
+      position: absolute;
+      background: #000;
+      width: 100%;
+      height: 8px;
+      border-radius: 10px;
+      -webkit-transform: scaleX(0);
+      -ms-transform: scaleX(0);
+      transform: scaleX(0);
+      -webkit-transform-origin: left;
+      -ms-transform-origin: left;
+      transform-origin: left;
+      -webkit-animation: animate 1s 1s cubic-bezier(1, 0, 0.5, 1) forwards;
+      animation: animate 1s 1s cubic-bezier(1, 0, 0.5, 1) forwards;
+    }
+
+    @-webkit-keyframes animate {
+      100% {
+        -webkit-transform: scaleX(1);
+        transform: scaleX(1);
+      }
+    }
+
+    @keyframes animate {
+      100% {
+        -webkit-transform: scaleX(1);
+        transform: scaleX(1);
+      }
+    }
+
+    .html span {
+      width: 100%;
+      background: #ffb5c2;
+    }
+
+    .css span {
+      width: 95%;
+      background: #fec0cb;
+    }
+
+    .javascript span {
+      width: 70%;
+      background: #ffd7de;
+    }
+
+    .sql span {
+      width: 80%;
+      background: #fecbd4;
+    }
+
+    .photoshop span {
+      width: 100%;
+      background: #ffb5c2;
+    }
+
+    .canva span {
+      width: 100%;
+      background: #fec0cb;
+    }
+
+    .premiere span {
+      width: 95%;
+      background: #fecbd4;
+    }
+
+    .illustrator span {
+      width: 90%;
+      background: #ffd7de;
+    }
+
+    .seo span {
+      width: 90%;
+      background: #fecbd4;
+    }
+
+    .email span {
+      width: 95%;
+      background: #fec0cb;
+    }
+
+    .social span {
+      width: 100%;
+      background: #ffb5c2;
+    }
+
+    .affiliate span {
+      width: 85%;
+      background: #ffd7de;
+    }
+
+    .skills h1 {
+      font-size: 25px !important;
+      margin: 0px;
+      font-family: 'Lexique';
+      padding-left: 40px;
+    }
+
+    .skills h2 {
+      font-size: 22px !important;
+      padding-left: 40px;
+      margin-bottom: 0px;
+    }
+
+    .skills p {
+      font-size: 18px !important;
+      margin-top: 20px;
+      max-width: 100%;
+      line-height: 1.3;
+      font-family: 'Lexique';
+      padding-left: 40px;
+    }
+
+    .services {
+      padding-left: 0px;
+      padding-right: 0px;
+      padding-top: 10px;
+      padding-bottom: 40px;
+      text-align: left;
+      color: #f0737f;
+      background-color: #fcedf0;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      max-height: 0%;
+    }
+
+      .collapsible {
+    display: block;
+    margin-top: 10px;
+    width: 90%;
+    padding-left: 40px;
+  }
+
+.collapsible-content {
+  display: none;
+  padding: 10px;
+  background-color: #fde2e7;
+  border: 0px solid #ddd;
+  font-size: 18px !important;
+  color: #f0737f;
+  text-align: left;
+
+}
+
+/* Toggle button styles */
+.collapsible-toggle {
+  width: 100%;
+  padding: 15px;
+  text-align: left;
+  font-size: 22px !important;
+  font-family: 'Lexique';
+  background-color: #fdd7de;
+  color: #f0737f;
+  border: none;
+  cursor: pointer;
+}
+
+    .services .grid {
+      margin-top: 0px;
+      display: none;
+      align-content: left;
+      max-width: 90%;
+      max-height: 100%;
+      grid-template-columns: 30% 30% 30%;
+      grid-template-rows: auto auto;
+      row-gap: 0px;
+      padding-left: 0px;
+    }
+
+    .grid div {
+      background-color: none;
+      text-align: left;
+      padding: 10px;
+
+    }
+
+    .services h1 {
+      font-size: 25px !important;
+      margin: 0px;
+      font-family: 'Lexique';
+      padding-left: 40px;
+    }
+
+    .services h2 {
+      font-size: 22px !important;
+      margin-bottom: 0px;
+      max-width: 100%;
+      padding-left: 40px;
+    }
+
+    .services p {
+      font-size: 18px !important;
+      max-width: 100%;
+      line-height: 1.3;
+      font-family: 'Lexique';
+      padding-left: 0px;
+    }
+
+    .contact {
+      padding-left: 0px;
+      padding-right: 0px;
+      padding-top: 0px;
+      padding-bottom: 30px;
+      text-align: left;
+      color: #f0737f;
+      background-color: #fcedf0;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      max-height: 100%;
+    }
+
+    .contact .icons {
+      display: grid;
+      grid-template-columns: auto auto;
+      font-size: 25px !important;
+      padding-left: 40px;
+      justify-content: center;
+      justify-items: center;
+      width: 90%;
+    }
+
+    .contact a {
+      padding-left: 40px;
+      font-size: 22px;
+    }
+
+    .contact h1 {
+      font-size: 25px !important;
+      margin: 0px;
+      font-family: 'Lexique';
+      padding-left: 40px;
+      padding-bottom: 20px;
+    }
+
+    .contact p {
+      font-size: 18px !important;
+      margin-top: 5px;
+      max-width: 50%;
+      line-height: 1.3;
+      font-family: 'Lexique';
+      padding-left: 40px;
+    }
+
+    .contact form {
+      width: 100%;
+      max-width: 500px;
+      padding-left: 40px;
+      font-size: 18px;
+      padding-top: 20px;
+    }
+
+    .contact label {
+      display: block;
+      margin-top: 10px;
+    }
+
+    .contact input[type="text"],
+    input[type="email"],
+    textarea {
+      width: 90%;
+      padding: 10px;
+      margin-top: 5px;
+      border: 1px solid #f0737f;
+      border-radius: 4px;
+      font-family: 'Lexique';
+      font-size: 18px;
+      color: #ffb5c2;
+    }
+
+    .contact button {
+      width: 90%;
+      padding: 10px;
+      margin-top: 15px;
+      background-color: #f0737f;
+      color: white;
+      border: none;
+      border-radius: 16px;
+      cursor: pointer;
+      font-family: 'Lexique';
+      font-size: 18px;
+    }
+
+    .contact button:hover {
+      background-color: #fcedf0;
+      color: #f0737f;
+      padding: 10px 20px;
+      border: #f0737f solid 2px;
+      border-radius: 16px;
+    }
+
+
+    .footer {
+      font-size: 20px;
+    }
+  }
+</style>
+
+<body>
+
+  <div class="navbar">
+    <a href="https://alecksjanetan.github.io/ajsdigiworld/"><img src="https://i.ibb.co/DzvNLPW/Pink-AJ-Letter-Logo-2.png"
+        width="50" height="50"></a>
+    <div class="menu-icon" onclick="toggleMenu()"> <!-- Hamburger icon for mobile -->
+      <div class="bar"></div>
+      <div class="bar"></div>
+      <div class="bar"></div>
+    </div>
+    <nav class="nav-menu">
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#experiences">Experiences</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+
+  <div class="header">
+    <h1>HELLO,</h1>
+    <p>I'm AJ.</p>
+    <div class="btn"><a href="https://acrobat.adobe.com/id/urn:aaid:sc:AP:4f6ed12c-32f8-45e9-83aa-71d2b32f8c1c"
+        style="text-decoration:none !important; margin-left: none; margin-right: none; margin-top: none !important;">View
+        Resume</a>
+    </div>
+  </div>
+
+  <section id="about">
+    <div class="about">
+      <h1>| About Me</h1>
+      <p> I am 28 years old this year with a
+        bachelor's degree in marketing. I pride
+        myself on being a versatile digital
+        marketer and designer with a unique
+        blend of creative and strategic
+        expertise. My
+        sharp eye for design and strong
+        foundation in marketing principles
+        allows me to craft compelling campaigns
+        that not only look stunning but also
+        drive results. From social media
+        strategy and content creation to web
+        design and branding, I understand how to
+        communicate a brand’s message
+        effectively across various digital
+        platforms.</p>
+    </div>
+  </section>
+
+  <section id="experiences">
+    <div class="experiences">
+      <div>
+        <h1>| Experiences</h1>
+      </div>
+      <div class="grid">
+        <div>
+          <h2>✹ Digital Marketing
+            Specialist</h2>
+          <p>Gigamon | May 2023
+            - Dec 2024</p>
+        </div>
+        <div>
+          <h2>✹ Growth Marketing
+            Specialist</h2>
+          <p>The Ads Club | Mar
+            2022 - Apr 2023</p>
+        </div>
+        <div>
+          <h2>✹ Digital Marketing
+            Intern</h2>
+          <p>Expressions Wellness |
+            Nov 2021 - Mar 2022</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="skills">
+    <div class="skills">
+      <h1>| Skills</h1>
+      <div class="outer-Container">
+        <div class="h2">Design</div>
+        <div class="h2">Code</div>
+        <div class="h2">Mediums</div>
+        <div class="iner-wrapper">
+          <div class="skill-bar">
+            <div class="info"><span>Photoshop</span></div>
+            <div class="progress-bar photoshop"><span></span></div>
+          </div>
+          <div class="skill-bar">
+            <div class="info"><span>Canva</span></div>
+            <div class="progress-bar canva"><span></span></div>
+          </div>
+          <div class="skill-bar">
+            <div class="info"><span>Premiere
+                Pro</span></div>
+            <div class="progress-bar premiere"><span></span></div>
+          </div>
+          <div class="skill-bar">
+            <div class="info"><span>Illustrator</span></div>
+            <div class="progress-bar illustrator"><span></span></div>
+          </div>
+        </div>
+
+        <div class="iner-wrapper">
+          <div class="skill-bar">
+            <div class="info"><span>HTML</span></div>
+            <div class="progress-bar html"><span></span></div>
+          </div>
+          <div class="skill-bar">
+            <div class="info"><span>CSS</span></div>
+            <div class="progress-bar css"><span></span></div>
+          </div>
+          <div class="skill-bar">
+            <div class="info"><span>SQL</span></div>
+            <div class="progress-bar sql"><span></span></div>
+          </div>
+          <div class="skill-bar">
+            <div class="info"><span>JavaScript</span></div>
+            <div class="progress-bar javascript"><span></span></div>
+          </div>
+        </div>
+        <div class="iner-wrapper">
+          <div class="skill-bar">
+            <div class="info"><span>Social
+                Media</span></div>
+            <div class="progress-bar social"><span></span></div>
+          </div>
+          <div class="skill-bar">
+            <div class="info"><span>Email</span></div>
+            <div class="progress-bar email"><span></span></div>
+          </div>
+          <div class="skill-bar">
+            <div class="info"><span>SEO</span></div>
+            <div class="progress-bar seo"><span></span></div>
+          </div>
+          <div class="skill-bar">
+            <div class="info"><span>Affiliate</span></div>
+            <div class="progress-bar affiliate"><span></span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    </section>
+
+  <section id="services">
+    <div class="services">
+      <h1>| Services</h1>
+      <div class="grid">
+        <div>
+          <h2>Social Media Marketing</h2>
+          <p>・Social Media Management<br>・Social Strategy Development<br>・Audience Engagement</p>
+        </div>
+        <div>
+          <h2>Email Marketing</h2>
+          <p>・Email Campaign Management<br>・Automated Email Sequences<br>・List Building & Segmentation</p>
+        </div>
+        <div>
+          <h2>Website & Landing Page</h2>
+          <p>・Website Design & Optimization<br>・Landing Page Optimization</p>
+        </div>
+        <div>
+          <h2>Pay-Per-Click Advertising</h2>
+          <p>・Google Ads<br>・Social Media Ads<br>・Remarketing (Retargeting)</p>
+        </div>
+        <div>
+          <h2>Analytics & Reporting</h2>
+          <p>・Performance Tracking<br>・Campaign Reporting<br>・Data-Driven Strategy</p>
+        </div>
+        <div>
+          <h2>Influencer & Affiliate Marketing</h2>
+          <p>・Influencer Outreach<br>・Affiliate Program Setup<br>・Tracking & Performance Analysis</p>
+        </div>
+      </div>
+      <div class="collapsible-container">
+        <div class="collapsible">
+          <button class="collapsible-toggle">Social Media Marketing</button>
+          <div class="collapsible-content">
+            <p>・Social Media Management<br>・Social Strategy Development<br>・Audience Engagement</p>
+          </div>
+        </div>
+      
+        <div class="collapsible">
+          <button class="collapsible-toggle">Email Marketing</button>
+          <div class="collapsible-content">
+            <p>・Email Campaign Management<br>・Automated Email Sequences<br>・List Building & Segmentation</p>
+          </div>
+        </div>
+      
+        <div class="collapsible">
+          <button class="collapsible-toggle">Website & Landing Page</button>
+          <div class="collapsible-content">
+            <p>・Website Design & Optimization<br>・Landing Page Optimization</p>
+          </div>
+        </div>
+      
+        <div class="collapsible">
+          <button class="collapsible-toggle">Pay-Per-Click Advertising</button>
+          <div class="collapsible-content">
+            <p>・Google Ads<br>・Social Media Ads<br>・Remarketing (Retargeting)</p>
+          </div>
+        </div>
+      
+        <div class="collapsible">
+          <button class="collapsible-toggle">Analytics & Reporting</button>
+          <div class="collapsible-content">
+            <p>・Performance Tracking<br>・Campaign Reporting<br>・Data-Driven Strategy</p>
+          </div>
+        </div>
+      
+        <div class="collapsible">
+          <button class="collapsible-toggle">Influencer & Affiliate Marketing</button>
+          <div class="collapsible-content">
+            <p>・Influencer Outreach<br>・Affiliate Program Setup<br>・Tracking & Performance Analysis</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="contact">
+      <h1>| Contact</h1>
+      <a href="https://www.instagram.com/alecksjanetan/"><i class="fa-brands fa-instagram" style="color: #f0737f;"></i>
+      </a>
+      <a href="https://www.linkedin.com/in/alex-jane-tan-6686a513a/"><i class="fa-brands fa-linkedin"
+          style="color: #f0737f;"></i>
+      </a>
+  <form action="send_email.php" method="POST">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+      
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+      
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" required></textarea>
+        
+        <button type="submit">Send</button>
+      </form>
+  </section>
+
+  <div class="footer">
+
+  </div>
+
+  <script src='https://raw.github.com/LeaVerou/HTML5-Progress-polyfill/master/progress-polyfill.min.js'></script>
+  <script src="script.js"></script>
+</body>
+
+</html>
